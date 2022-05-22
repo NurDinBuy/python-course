@@ -37,8 +37,14 @@ class Data:
     def color(self, value):
         self.__color = value
 
+    def __str__(self):
+        return f'{self.__full_name} {self.__email} {self.__file_name} {self.__color}'
+
+
 
 files = ['full_name.txt', 'email.txt', 'file_name.txt', 'color.txt']
+
+
 
 
 def MainFunc():
@@ -78,3 +84,25 @@ def RemList():
 
 RemList()
 MainFunc()
+
+while True:
+    change = input('1 - Считать имена и фамилии \n 2 - Считать все емайлы \n 3 - Считать названия файлов \n 4 - Считать цвета \n 5 - Выход \n Выберите: ')
+    if change == '5':
+        print('Программа завершена!')
+        break
+    elif change == '1':
+        with open('full_name.txt') as name:
+            for i in name:
+                print(i)
+    elif change == '2':
+        with open('email.txt') as email:
+            for i in email:
+                print(i)
+    elif change == '3':
+        with open('file_name.txt') as file:
+            for i in file:
+                print(i)
+    elif change == '4':
+        with open('color.txt') as color:
+            for i in color:
+                print(i)
