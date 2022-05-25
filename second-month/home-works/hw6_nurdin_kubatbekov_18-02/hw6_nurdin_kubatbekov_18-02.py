@@ -37,8 +37,7 @@ class Data:
     def color(self, value):
         self.__color = value
 
-    def __str__(self):
-        return f'{self.__full_name} {self.__email} {self.__file_name} {self.__color}'
+
 
 
 
